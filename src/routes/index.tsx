@@ -27,7 +27,7 @@ type CatalogSearch = { q?: string };
 
 export const Route = createFileRoute("/")({
   validateSearch: (search: Record<string, unknown>): CatalogSearch =>
-    typeof search.q === "string" && search.q.trim() ? { q: search.q } : {},
+    typeof search['q'] === "string" && search['q'].trim() ? { q: search['q'] } : {},
   head: () => ({
     meta: [
       { title: "Katalog Songket Asli Jembrana — Tenun PutriMas" },
